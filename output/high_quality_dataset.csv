@@ -1,0 +1,808 @@
+id,sentence,emotion,layer,confidence_llama,confidence_mistral,avg_confidence
+2,It reflected a genuine feeling of afraid.,fear,1,0.93,0.95,0.94
+5,They experienced expressed regret in a quiet moment.,regret,2,0.95,0.95,0.95
+6,You could sense the regret in their voice.,regret,2,0.95,0.95,0.95
+7,That experience left them with lasting compassion.,compassion,3,0.92,0.95,0.935
+8,The situation brought out deep human connection.,empathy,2,0.85,0.95,0.8999999999999999
+9,That experience left them with lasting mercy.,compassion,3,0.92,0.95,0.935
+10,A sudden feeling of gratitude filled their heart.,gratitude,3,0.92,0.95,0.935
+11,It reflected a genuine feeling of sympathy.,empathy,2,0.93,0.95,0.94
+13,It was a moment marked by deeply moved.,sadness,1,0.83,0.95,0.8899999999999999
+18,There was a clear sense of expressed regret throughout the day.,regret,2,0.93,0.95,0.94
+19,You could sense the felt regret in their voice.,regret,2,0.92,0.95,0.935
+20,You could sense the isolation in their voice.,loneliness,2,0.92,0.95,0.935
+23,The situation brought out deep awe.,awe,3,0.95,0.95,0.95
+24,It reflected a genuine feeling of expressed regret.,regret,2,0.95,0.95,0.95
+27,There was a clear sense of thankful throughout the day.,gratitude,3,0.92,0.95,0.935
+29,There was a clear sense of frightened throughout the day.,fear,1,0.92,0.95,0.935
+30,That experience left them with lasting acceptance.,inner_peace,3,0.85,0.95,0.8999999999999999
+34,It reflected a genuine feeling of grief.,sadness,1,0.98,0.95,0.965
+35,They experienced connectedness in a quiet moment.,inner_peace,3,0.92,0.95,0.935
+36,That experience left them with lasting wonder.,awe,3,0.93,0.95,0.94
+37,You could sense the calmness in their voice.,inner_peace,3,0.83,0.95,0.8899999999999999
+40,They experienced joy in a quiet moment.,joy,1,0.95,0.95,0.95
+41,It reflected a genuine feeling of expressed joy.,joy,1,0.95,0.95,0.95
+42,Everyone noticed the felt regret in that moment.,regret,2,0.92,0.95,0.935
+44,There was a clear sense of hope throughout the day.,hope,2,0.93,0.95,0.94
+45,The situation brought out deep acceptance.,inner_peace,3,0.92,0.95,0.935
+46,The situation brought out deep expressed sadness.,sadness,1,0.95,0.95,0.95
+47,They experienced expressed hope in a quiet moment.,hope,2,0.95,0.95,0.95
+49,Everyone noticed the celebration in that moment.,joy,1,0.92,0.95,0.935
+50,You could sense the loneliness in their voice.,loneliness,2,0.92,0.95,0.935
+55,It was a moment marked by sense of awe.,awe,3,0.93,0.95,0.94
+56,It was a moment marked by expressed hope.,hope,2,0.97,0.95,0.96
+57,A sudden feeling of thankful filled their heart.,gratitude,3,0.93,0.95,0.94
+58,It was a moment marked by hope.,hope,2,0.95,0.95,0.95
+59,Everyone noticed the regret in that moment.,regret,2,0.98,0.95,0.965
+60,There was a clear sense of remorse throughout the day.,regret,2,0.92,0.95,0.935
+61,They experienced hope in a quiet moment.,hope,2,0.92,0.95,0.935
+62,You could sense the remorse in their voice.,regret,2,0.92,0.95,0.935
+63,It was a moment marked by isolation.,loneliness,2,0.83,0.95,0.8899999999999999
+64,It reflected a genuine feeling of isolation.,loneliness,2,0.92,0.95,0.935
+66,The situation brought out deep gratitude.,gratitude,3,0.93,0.95,0.94
+67,A sudden feeling of felt sympathy filled their heart.,empathy,2,0.95,0.95,0.95
+69,You could sense the happiness in their voice.,joy,1,0.92,0.95,0.935
+71,It reflected a genuine feeling of public anger.,anger,1,0.92,0.95,0.935
+72,You could sense the isolation in their voice.,loneliness,2,0.92,0.95,0.935
+74,You could sense the fear in their voice.,fear,1,0.95,0.95,0.95
+75,They experienced compassion in a quiet moment.,compassion,3,0.95,0.95,0.95
+77,They experienced mourning in a quiet moment.,sadness,1,0.92,0.95,0.935
+78,It was a moment marked by angry.,anger,1,0.95,0.95,0.95
+80,They experienced sign of hope in a quiet moment.,hope,2,0.92,0.95,0.935
+81,The situation brought out deep loneliness.,loneliness,2,0.95,0.95,0.95
+82,They experienced empathy in a quiet moment.,empathy,2,0.95,0.95,0.95
+83,A sudden feeling of fear filled their heart.,fear,1,0.98,0.95,0.965
+86,That experience left them with lasting deeply moved.,sadness,1,0.92,0.85,0.885
+87,It was a moment marked by expressed gratitude.,gratitude,3,0.95,0.95,0.95
+88,It was a moment marked by social isolation.,loneliness,2,0.92,0.95,0.935
+89,That experience left them with lasting loneliness.,loneliness,2,0.95,0.95,0.95
+91,It reflected a genuine feeling of public anger.,anger,1,0.92,0.95,0.935
+95,A sudden feeling of felt regret filled their heart.,regret,2,0.92,0.95,0.935
+96,Everyone noticed the letting go in that moment.,sadness,1,0.83,0.85,0.84
+97,The situation brought out deep felt regret.,regret,2,0.92,0.95,0.935
+98,The situation brought out deep expressed anger.,anger,1,0.93,0.95,0.94
+99,The situation brought out deep mourning.,sadness,1,0.92,0.95,0.935
+101,Everyone noticed the afraid in that moment.,fear,1,0.92,0.95,0.935
+105,It was a moment marked by anger.,anger,1,0.98,0.95,0.965
+106,You could sense the calmness in their voice.,inner_peace,3,0.83,0.95,0.8899999999999999
+107,The situation brought out deep awe.,awe,3,0.95,0.95,0.95
+109,That experience left them with lasting loneliness.,loneliness,2,0.95,0.95,0.95
+112,There was a clear sense of felt regret throughout the day.,regret,2,0.93,0.95,0.94
+113,You could sense the loneliness in their voice.,loneliness,2,0.93,0.95,0.94
+114,Everyone noticed the anger in that moment.,anger,1,0.93,0.95,0.94
+115,Everyone noticed the felt regret in that moment.,regret,2,0.92,0.95,0.935
+116,It reflected a genuine feeling of outrage.,anger,1,0.92,0.95,0.935
+117,Everyone noticed the calmness in that moment.,inner_peace,3,0.85,0.95,0.8999999999999999
+118,Everyone noticed the expressed joy in that moment.,joy,1,0.95,0.95,0.95
+120,Everyone noticed the sense of awe in that moment.,awe,3,0.93,1.0,0.9650000000000001
+121,It was a moment marked by expressed regret.,regret,2,0.95,0.95,0.95
+124,That experience left them with lasting joy.,joy,1,0.95,0.95,0.95
+126,You could sense the expressed fear in their voice.,fear,1,0.92,0.95,0.935
+127,A sudden feeling of celebration filled their heart.,joy,1,0.92,0.95,0.935
+128,You could sense the delight in their voice.,joy,1,0.92,0.95,0.935
+129,It reflected a genuine feeling of hope.,hope,2,0.95,0.95,0.95
+132,There was a clear sense of gratitude throughout the day.,gratitude,3,0.92,0.95,0.935
+133,That experience left them with lasting hope.,hope,2,0.95,0.95,0.95
+134,They experienced isolation in a quiet moment.,loneliness,2,0.83,0.95,0.8899999999999999
+135,A sudden feeling of loneliness filled their heart.,loneliness,2,0.93,0.95,0.94
+136,You could sense the empathy in their voice.,empathy,2,0.92,0.95,0.935
+143,That experience left them with lasting anger.,anger,1,0.95,0.95,0.95
+144,Everyone noticed the expressed regret in that moment.,regret,2,0.95,0.95,0.95
+145,It was a moment marked by sadness.,sadness,1,0.95,0.95,0.95
+146,The situation brought out deep celebration.,joy,1,0.92,0.95,0.935
+148,It was a moment marked by peace of mind.,inner_peace,3,0.93,0.95,0.94
+149,A sudden feeling of sadness filled their heart.,sadness,1,0.98,0.95,0.965
+151,A sudden feeling of furious filled their heart.,anger,1,0.95,0.95,0.95
+152,It was a moment marked by sad.,sadness,1,0.85,0.95,0.8999999999999999
+153,It reflected a genuine feeling of isolation.,loneliness,2,0.92,0.95,0.935
+154,The situation brought out deep frightened.,fear,1,0.92,0.95,0.935
+155,It reflected a genuine feeling of peace of mind.,inner_peace,3,0.93,0.95,0.94
+156,A sudden feeling of compassionate filled their heart.,compassion,3,0.95,0.95,0.95
+157,You could sense the heartbroken in their voice.,sadness,1,0.92,0.95,0.935
+161,It was a moment marked by felt sympathy.,empathy,2,0.95,0.95,0.95
+163,There was a clear sense of sign of hope throughout the day.,hope,2,0.93,0.95,0.94
+164,It was a moment marked by compassionate.,compassion,3,0.93,1.0,0.9650000000000001
+165,It was a moment marked by happy.,joy,1,0.95,0.95,0.95
+166,They experienced social isolation in a quiet moment.,loneliness,2,0.83,0.95,0.8899999999999999
+167,There was a clear sense of frightened throughout the day.,fear,1,0.93,0.95,0.94
+168,The situation brought out deep wonder.,awe,3,0.92,0.95,0.935
+170,Everyone noticed the expressed gratitude in that moment.,gratitude,3,0.95,0.95,0.95
+171,It reflected a genuine feeling of expressed regret.,regret,2,0.95,0.95,0.95
+172,That experience left them with lasting awe.,awe,3,0.95,0.95,0.95
+175,A sudden feeling of panic filled their heart.,fear,1,0.92,0.95,0.935
+176,It was a moment marked by grateful.,gratitude,3,0.95,0.95,0.95
+177,They experienced hopeful in a quiet moment.,hope,2,0.92,0.95,0.935
+179,That experience left them with lasting joy.,joy,1,0.95,0.95,0.95
+180,It was a moment marked by heartbroken.,sadness,1,0.95,0.95,0.95
+183,The situation brought out deep mourning.,sadness,1,0.93,0.95,0.94
+184,You could sense the calmness in their voice.,inner_peace,3,0.92,0.95,0.935
+185,They experienced awe in a quiet moment.,awe,3,0.93,0.95,0.94
+186,The situation brought out deep terrified.,fear,1,0.92,0.95,0.935
+188,A sudden feeling of deeply moved filled their heart.,awe,3,0.93,0.95,0.94
+189,That experience left them with lasting empathy.,empathy,2,0.95,0.95,0.95
+190,Everyone noticed the frightened in that moment.,fear,1,0.93,0.95,0.94
+191,A sudden feeling of social isolation filled their heart.,loneliness,2,0.92,0.95,0.935
+192,You could sense the expressed gratitude in their voice.,gratitude,3,0.92,0.95,0.935
+193,That experience left them with lasting hopeful.,hope,2,0.98,0.95,0.965
+194,It reflected a genuine feeling of inner peace.,inner_peace,3,0.95,0.95,0.95
+195,A sudden feeling of awe filled their heart.,awe,3,0.92,0.95,0.935
+196,A sudden feeling of outrage filled their heart.,anger,1,0.92,0.95,0.935
+197,There was a clear sense of felt sympathy throughout the day.,empathy,2,0.93,0.95,0.94
+199,The situation brought out deep happy.,joy,1,0.95,0.95,0.95
+201,It reflected a genuine feeling of social isolation.,loneliness,2,0.92,0.95,0.935
+206,That experience left them with lasting terrified.,fear,1,0.93,0.95,0.94
+210,That experience left them with lasting letting go.,sadness,1,0.87,0.95,0.9099999999999999
+212,They experienced heartbroken in a quiet moment.,sadness,1,0.83,0.95,0.8899999999999999
+214,They experienced expressed sadness in a quiet moment.,sadness,1,0.95,0.95,0.95
+217,It reflected a genuine feeling of wonder.,awe,3,0.92,0.95,0.935
+218,There was a clear sense of expressed anger throughout the day.,anger,1,0.93,0.95,0.94
+219,The situation brought out deep fear.,fear,1,0.95,0.95,0.95
+221,It was a moment marked by felt sympathy.,empathy,2,0.92,0.95,0.935
+222,It was a moment marked by loneliness.,loneliness,2,0.95,0.95,0.95
+223,You could sense the wonder in their voice.,awe,3,0.92,0.95,0.935
+224,It reflected a genuine feeling of expressed anger.,anger,1,0.95,0.95,0.95
+225,You could sense the happiness in their voice.,joy,1,0.92,0.95,0.935
+226,There was a clear sense of expressed gratitude throughout the day.,gratitude,3,0.93,0.95,0.94
+228,It was a moment marked by felt regret.,regret,2,0.95,0.95,0.95
+229,Everyone noticed the expressed sadness in that moment.,sadness,1,0.95,0.95,0.95
+230,It was a moment marked by hope.,hope,2,0.93,0.95,0.94
+232,A sudden feeling of sense of awe filled their heart.,awe,3,0.95,0.95,0.95
+233,Everyone noticed the outrage in that moment.,anger,1,0.92,0.95,0.935
+234,That experience left them with lasting wonder.,awe,3,0.92,0.95,0.935
+235,A sudden feeling of celebration filled their heart.,joy,1,0.95,0.95,0.95
+236,Everyone noticed the felt regret in that moment.,regret,2,0.93,0.95,0.94
+238,The situation brought out deep expressed sadness.,sadness,1,0.95,0.95,0.95
+242,Everyone noticed the angry in that moment.,anger,1,0.92,0.95,0.935
+243,It reflected a genuine feeling of joy.,joy,1,0.95,0.95,0.95
+244,They experienced hopeful in a quiet moment.,hope,2,0.93,0.95,0.94
+245,There was a clear sense of heartbroken throughout the day.,sadness,1,0.92,0.95,0.935
+246,That experience left them with lasting inner peace.,inner_peace,3,0.95,0.95,0.95
+247,That experience left them with lasting hope.,hope,2,0.95,0.95,0.95
+248,It was a moment marked by expressed anger.,anger,1,0.95,0.95,0.95
+252,It reflected a genuine feeling of joy.,joy,1,0.95,0.95,0.95
+253,Everyone noticed the panic in that moment.,fear,1,0.83,0.95,0.8899999999999999
+255,It reflected a genuine feeling of mourning.,sadness,1,0.93,0.95,0.94
+256,That experience left them with lasting hope.,hope,2,0.95,0.95,0.95
+257,It was a moment marked by grief.,sadness,1,0.92,0.95,0.935
+258,The situation brought out deep celebration.,joy,1,0.95,0.95,0.95
+259,That experience left them with lasting isolation.,loneliness,2,0.83,0.95,0.8899999999999999
+261,The situation brought out deep angry.,anger,1,0.92,0.95,0.935
+262,It was a moment marked by awe.,awe,3,0.93,1.0,0.9650000000000001
+263,You could sense the outrage in their voice.,anger,1,0.92,0.95,0.935
+264,The situation brought out deep compassion.,compassion,3,0.92,0.95,0.935
+266,A sudden feeling of outrage filled their heart.,anger,1,0.92,0.95,0.935
+267,It reflected a genuine feeling of hope.,hope,2,0.95,0.95,0.95
+268,The situation brought out deep panic.,fear,1,0.92,0.95,0.935
+269,There was a clear sense of loneliness throughout the day.,loneliness,2,0.93,0.95,0.94
+270,They experienced panic in a quiet moment.,fear,1,0.83,0.95,0.8899999999999999
+272,They experienced awe in a quiet moment.,awe,3,0.92,0.95,0.935
+274,Everyone noticed the fear in that moment.,fear,1,0.95,0.95,0.95
+275,There was a clear sense of terrified throughout the day.,fear,1,0.92,0.95,0.935
+276,They experienced angry in a quiet moment.,anger,1,0.93,0.95,0.94
+277,They experienced public anger in a quiet moment.,anger,1,0.92,0.95,0.935
+278,It reflected a genuine feeling of lonely.,loneliness,2,0.95,0.95,0.95
+282,There was a clear sense of panic throughout the day.,fear,1,0.83,0.95,0.8899999999999999
+283,You could sense the sadness in their voice.,sadness,1,0.95,0.95,0.95
+285,They experienced expressed fear in a quiet moment.,fear,1,0.9,0.95,0.925
+287,They experienced sign of hope in a quiet moment.,hope,2,0.92,0.95,0.935
+288,A sudden feeling of public anger filled their heart.,anger,1,0.95,0.95,0.95
+289,There was a clear sense of regret throughout the day.,regret,2,0.95,0.95,0.95
+290,You could sense the anger in their voice.,anger,1,0.93,0.85,0.89
+291,Everyone noticed the loneliness in that moment.,loneliness,2,0.93,0.95,0.94
+293,Everyone noticed the frightened in that moment.,fear,1,0.92,0.95,0.935
+294,It was a moment marked by expressed sadness.,sadness,1,0.98,0.95,0.965
+295,It was a moment marked by furious.,anger,1,0.93,0.95,0.94
+298,It was a moment marked by sadness.,sadness,1,0.95,0.95,0.95
+299,A sudden feeling of sad filled their heart.,sadness,1,0.95,0.95,0.95
+302,A sudden feeling of expressed regret filled their heart.,regret,2,0.95,0.95,0.95
+304,It was a moment marked by inner peace.,inner_peace,3,0.95,0.98,0.965
+307,It reflected a genuine feeling of grief.,sadness,1,0.92,0.95,0.935
+308,It was a moment marked by expressed joy.,joy,1,0.95,0.95,0.95
+309,That experience left them with lasting inner peace.,inner_peace,3,0.93,0.95,0.94
+310,You could sense the lonely in their voice.,loneliness,2,0.92,0.95,0.935
+312,There was a clear sense of expressed sadness throughout the day.,sadness,1,0.95,0.95,0.95
+313,They experienced felt regret in a quiet moment.,regret,2,0.92,0.95,0.935
+315,It was a moment marked by calmness.,inner_peace,3,0.92,0.95,0.935
+316,It was a moment marked by inner peace.,inner_peace,3,0.92,0.95,0.935
+317,That experience left them with lasting grateful.,gratitude,3,0.92,0.85,0.885
+320,You could sense the hopeful in their voice.,hope,2,0.92,0.95,0.935
+321,It was a moment marked by social isolation.,loneliness,2,0.92,0.95,0.935
+323,Everyone noticed the calmness in that moment.,inner_peace,3,0.92,0.95,0.935
+324,Everyone noticed the delight in that moment.,joy,1,0.92,0.95,0.935
+326,They experienced furious in a quiet moment.,anger,1,0.92,0.85,0.885
+331,They experienced expressed gratitude in a quiet moment.,gratitude,3,0.95,0.95,0.95
+333,It reflected a genuine feeling of remorse.,regret,2,0.92,0.95,0.935
+336,It reflected a genuine feeling of expressed regret.,regret,2,0.95,0.95,0.95
+338,That experience left them with lasting joy.,joy,1,0.95,0.95,0.95
+340,The situation brought out deep lonely.,loneliness,2,0.92,0.95,0.935
+341,It reflected a genuine feeling of remorse.,regret,2,0.92,0.95,0.935
+344,They experienced terrified in a quiet moment.,fear,1,0.95,0.95,0.95
+345,That experience left them with lasting joy.,joy,1,0.95,0.95,0.95
+346,There was a clear sense of felt sympathy throughout the day.,empathy,2,0.95,0.95,0.95
+347,The situation brought out deep mourning.,sadness,1,0.95,0.95,0.95
+348,It reflected a genuine feeling of expressed gratitude.,gratitude,3,0.95,0.95,0.95
+349,The situation brought out deep thankful.,gratitude,3,0.93,0.95,0.94
+350,It reflected a genuine feeling of panic.,fear,1,0.93,0.95,0.94
+353,A sudden feeling of expressed regret filled their heart.,regret,2,0.92,0.95,0.935
+354,They experienced felt regret in a quiet moment.,regret,2,0.98,0.95,0.965
+355,It was a moment marked by expressed anger.,anger,1,0.95,0.95,0.95
+356,That experience left them with lasting isolation.,loneliness,2,0.92,0.95,0.935
+357,It reflected a genuine feeling of expressed joy.,joy,1,0.98,0.95,0.965
+358,Everyone noticed the outrage in that moment.,anger,1,0.92,0.85,0.885
+363,They experienced frightened in a quiet moment.,fear,1,0.92,0.95,0.935
+364,They experienced felt regret in a quiet moment.,regret,2,0.92,0.95,0.935
+368,That experience left them with lasting wonder.,awe,3,0.92,0.95,0.935
+369,They experienced expressed anger in a quiet moment.,anger,1,0.92,0.95,0.935
+370,That experience left them with lasting sense of awe.,awe,3,0.97,0.95,0.96
+371,It was a moment marked by celebration.,joy,1,0.92,0.95,0.935
+372,There was a clear sense of felt sympathy throughout the day.,empathy,2,0.93,0.95,0.94
+373,It reflected a genuine feeling of expressed sadness.,sadness,1,0.95,0.95,0.95
+374,Everyone noticed the public anger in that moment.,anger,1,0.95,0.95,0.95
+376,It was a moment marked by expressed gratitude.,gratitude,3,0.92,0.95,0.935
+378,It reflected a genuine feeling of afraid.,fear,1,0.95,0.95,0.95
+379,A sudden feeling of joy filled their heart.,joy,1,0.95,0.95,0.95
+380,There was a clear sense of hopeful throughout the day.,hope,2,0.92,0.95,0.935
+381,A sudden feeling of fear filled their heart.,fear,1,0.93,0.95,0.94
+383,They experienced remorse in a quiet moment.,regret,2,0.92,0.95,0.935
+387,They experienced sense of awe in a quiet moment.,awe,3,0.95,0.95,0.95
+389,A sudden feeling of hope filled their heart.,hope,2,0.95,0.95,0.95
+391,You could sense the expressed hope in their voice.,hope,2,0.92,0.95,0.935
+394,A sudden feeling of awe filled their heart.,awe,3,0.95,0.95,0.95
+395,A sudden feeling of sign of hope filled their heart.,hope,2,0.92,0.95,0.935
+397,You could sense the joy in their voice.,joy,1,0.92,0.95,0.935
+398,They experienced anger in a quiet moment.,anger,1,0.92,0.95,0.935
+401,It was a moment marked by heartbroken.,sadness,1,0.95,0.95,0.95
+402,The situation brought out deep expressed gratitude.,gratitude,3,0.95,0.95,0.95
+405,It was a moment marked by fear.,fear,1,0.95,0.95,0.95
+407,It was a moment marked by grief.,sadness,1,0.9,0.95,0.925
+409,It was a moment marked by angry.,anger,1,0.95,0.95,0.95
+410,You could sense the panic in their voice.,fear,1,0.92,0.95,0.935
+411,A sudden feeling of grief filled their heart.,sadness,1,0.95,0.95,0.95
+414,The situation brought out deep peace of mind.,inner_peace,3,0.93,0.95,0.94
+415,There was a clear sense of expressed hope throughout the day.,hope,2,0.92,0.95,0.935
+416,It reflected a genuine feeling of awe.,awe,3,0.98,1.0,0.99
+419,The situation brought out deep loneliness.,loneliness,2,0.92,0.95,0.935
+420,They experienced peace of mind in a quiet moment.,inner_peace,3,0.92,0.95,0.935
+421,A sudden feeling of wonder filled their heart.,awe,3,0.92,0.95,0.935
+422,It reflected a genuine feeling of grateful.,gratitude,3,0.93,0.95,0.94
+423,The situation brought out deep mourning.,sadness,1,0.93,0.95,0.94
+425,There was a clear sense of expressed sadness throughout the day.,sadness,1,0.95,0.95,0.95
+426,That experience left them with lasting gratitude.,gratitude,3,0.92,0.95,0.935
+427,They experienced connectedness in a quiet moment.,inner_peace,3,0.85,0.95,0.8999999999999999
+429,There was a clear sense of furious throughout the day.,anger,1,0.92,0.95,0.935
+430,The situation brought out deep happy.,joy,1,0.95,0.85,0.8999999999999999
+432,There was a clear sense of sense of awe throughout the day.,awe,3,0.93,0.95,0.94
+433,You could sense the sign of hope in their voice.,hope,2,0.92,0.95,0.935
+435,It was a moment marked by delight.,joy,1,0.92,0.95,0.935
+436,They experienced celebration in a quiet moment.,joy,1,0.95,0.95,0.95
+437,Everyone noticed the calmness in that moment.,inner_peace,3,0.92,0.95,0.935
+438,It was a moment marked by acceptance.,inner_peace,3,0.92,0.95,0.935
+440,It reflected a genuine feeling of inner peace.,inner_peace,3,0.92,0.98,0.95
+441,There was a clear sense of social isolation throughout the day.,loneliness,2,0.83,0.95,0.8899999999999999
+443,You could sense the social isolation in their voice.,loneliness,2,0.83,0.95,0.8899999999999999
+444,A sudden feeling of terrified filled their heart.,fear,1,0.95,0.95,0.95
+445,That experience left them with lasting inner peace.,inner_peace,3,0.92,0.95,0.935
+446,You could sense the expressed sadness in their voice.,sadness,1,0.98,0.95,0.965
+448,You could sense the loneliness in their voice.,loneliness,2,0.92,0.95,0.935
+449,Everyone noticed the sad in that moment.,sadness,1,0.92,0.95,0.935
+451,You could sense the hope in their voice.,hope,2,0.92,0.95,0.935
+452,It reflected a genuine feeling of celebration.,joy,1,0.92,0.95,0.935
+456,The situation brought out deep social isolation.,loneliness,2,0.92,0.95,0.935
+457,That experience left them with lasting expressed fear.,fear,1,0.95,0.95,0.95
+459,That experience left them with lasting remorse.,regret,2,0.95,0.95,0.95
+460,It reflected a genuine feeling of afraid.,fear,1,0.95,0.95,0.95
+461,It was a moment marked by celebration.,joy,1,0.93,0.95,0.94
+462,It was a moment marked by gratitude.,gratitude,3,0.95,0.95,0.95
+463,A sudden feeling of deeply moved filled their heart.,awe,3,0.92,0.95,0.935
+464,You could sense the celebration in their voice.,joy,1,0.92,0.85,0.885
+468,You could sense the felt regret in their voice.,regret,2,0.92,0.95,0.935
+470,That experience left them with lasting understanding others.,empathy,2,0.83,0.95,0.8899999999999999
+472,They experienced hopeful in a quiet moment.,hope,2,0.92,0.95,0.935
+475,It was a moment marked by sign of hope.,hope,2,0.92,0.95,0.935
+476,Everyone noticed the sympathy in that moment.,empathy,2,0.92,0.95,0.935
+477,The situation brought out deep panic.,fear,1,0.92,0.95,0.935
+478,The situation brought out deep sadness.,sadness,1,0.95,0.95,0.95
+480,Everyone noticed the mourning in that moment.,sadness,1,0.93,0.85,0.89
+481,It reflected a genuine feeling of happy.,joy,1,0.95,0.95,0.95
+483,It reflected a genuine feeling of expressed hope.,hope,2,0.95,0.95,0.95
+485,You could sense the lonely in their voice.,loneliness,2,0.93,0.95,0.94
+486,The situation brought out deep lonely.,loneliness,2,0.95,0.95,0.95
+487,It was a moment marked by compassion.,compassion,3,0.93,0.95,0.94
+488,That experience left them with lasting empathy.,empathy,2,0.92,0.95,0.935
+489,They experienced peace of mind in a quiet moment.,inner_peace,3,0.93,0.95,0.94
+492,Everyone noticed the connectedness in that moment.,empathy,2,0.92,0.85,0.885
+493,Everyone noticed the lonely in that moment.,loneliness,2,0.92,0.95,0.935
+494,There was a clear sense of mourning throughout the day.,sadness,1,0.93,0.95,0.94
+495,You could sense the wonder in their voice.,awe,3,0.92,0.95,0.935
+496,A sudden feeling of heartbroken filled their heart.,sadness,1,0.92,0.95,0.935
+498,That experience left them with lasting furious.,anger,1,0.92,0.95,0.935
+499,They experienced frightened in a quiet moment.,fear,1,0.95,0.95,0.95
+500,They experienced expressed hope in a quiet moment.,hope,2,0.93,0.95,0.94
+501,The situation brought out deep inner peace.,inner_peace,3,0.93,0.95,0.94
+502,It was a moment marked by wonder.,awe,3,0.92,0.95,0.935
+504,It reflected a genuine feeling of mourning.,sadness,1,0.92,0.95,0.935
+505,A sudden feeling of expressed sadness filled their heart.,sadness,1,0.95,0.95,0.95
+506,There was a clear sense of lonely throughout the day.,loneliness,2,0.92,0.95,0.935
+507,It reflected a genuine feeling of gratitude.,gratitude,3,0.98,0.95,0.965
+509,Everyone noticed the sense of awe in that moment.,awe,3,0.93,0.95,0.94
+510,That experience left them with lasting gratitude.,gratitude,3,0.92,0.95,0.935
+511,It was a moment marked by fear.,fear,1,0.98,0.95,0.965
+512,It reflected a genuine feeling of hopeful.,hope,2,0.92,0.95,0.935
+513,That experience left them with lasting hopeful.,hope,2,0.92,0.95,0.935
+514,It reflected a genuine feeling of sad.,sadness,1,0.95,0.95,0.95
+516,You could sense the compassion in their voice.,compassion,3,0.92,0.95,0.935
+518,That experience left them with lasting hopeful.,hope,2,0.95,0.95,0.95
+519,They experienced felt regret in a quiet moment.,regret,2,0.92,0.95,0.935
+520,A sudden feeling of isolation filled their heart.,loneliness,2,0.92,0.95,0.935
+521,A sudden feeling of isolation filled their heart.,loneliness,2,0.95,0.95,0.95
+523,You could sense the thankful in their voice.,gratitude,3,0.92,0.95,0.935
+527,That experience left them with lasting felt regret.,regret,2,0.93,0.95,0.94
+528,It reflected a genuine feeling of celebration.,joy,1,0.92,0.95,0.935
+529,That experience left them with lasting sympathy.,empathy,2,0.92,0.95,0.935
+530,The situation brought out deep empathy.,empathy,2,0.95,0.95,0.95
+531,A sudden feeling of happiness filled their heart.,joy,1,0.95,0.95,0.95
+532,That experience left them with lasting happy.,joy,1,0.92,0.95,0.935
+533,There was a clear sense of empathy throughout the day.,empathy,2,0.93,0.95,0.94
+534,It reflected a genuine feeling of peace of mind.,inner_peace,3,0.92,0.95,0.935
+535,Everyone noticed the grateful in that moment.,gratitude,3,0.92,0.95,0.935
+536,There was a clear sense of heartbroken throughout the day.,sadness,1,0.92,0.95,0.935
+537,There was a clear sense of regret throughout the day.,regret,2,0.98,0.95,0.965
+539,That experience left them with lasting calmness.,inner_peace,3,0.83,0.95,0.8899999999999999
+540,The situation brought out deep sadness.,sadness,1,0.95,0.95,0.95
+542,They experienced public anger in a quiet moment.,anger,1,0.92,0.95,0.935
+545,They experienced loneliness in a quiet moment.,loneliness,2,0.93,0.95,0.94
+546,It was a moment marked by acceptance.,inner_peace,3,0.92,0.95,0.935
+547,It reflected a genuine feeling of hope.,hope,2,0.95,0.95,0.95
+549,Everyone noticed the grateful in that moment.,gratitude,3,0.92,0.95,0.935
+551,That experience left them with lasting wonder.,awe,3,0.93,0.95,0.94
+553,There was a clear sense of terrified throughout the day.,fear,1,0.92,0.95,0.935
+554,A sudden feeling of heartbroken filled their heart.,sadness,1,0.92,0.95,0.935
+557,You could sense the social isolation in their voice.,loneliness,2,0.92,0.95,0.935
+558,There was a clear sense of anger throughout the day.,anger,1,0.95,0.95,0.95
+559,That experience left them with lasting grateful.,gratitude,3,0.93,0.95,0.94
+560,That experience left them with lasting expressed gratitude.,gratitude,3,0.98,0.95,0.965
+561,You could sense the social isolation in their voice.,loneliness,2,0.92,0.85,0.885
+562,They experienced isolation in a quiet moment.,loneliness,2,0.83,0.95,0.8899999999999999
+563,There was a clear sense of outrage throughout the day.,anger,1,0.83,0.95,0.8899999999999999
+564,Everyone noticed the happy in that moment.,joy,1,0.92,0.95,0.935
+566,There was a clear sense of furious throughout the day.,anger,1,0.95,0.95,0.95
+567,The situation brought out deep outrage.,anger,1,0.92,0.95,0.935
+569,There was a clear sense of expressed anger throughout the day.,anger,1,0.95,0.95,0.95
+570,It reflected a genuine feeling of compassionate.,compassion,3,0.95,0.95,0.95
+571,It reflected a genuine feeling of isolation.,loneliness,2,0.92,0.95,0.935
+572,There was a clear sense of inner peace throughout the day.,inner_peace,3,0.93,0.95,0.94
+576,A sudden feeling of deeply moved filled their heart.,awe,3,0.92,0.95,0.935
+577,They experienced compassionate in a quiet moment.,compassion,3,0.92,1.0,0.96
+578,That experience left them with lasting gratitude.,gratitude,3,0.92,0.95,0.935
+583,There was a clear sense of frightened throughout the day.,fear,1,0.93,0.95,0.94
+584,A sudden feeling of expressed hope filled their heart.,hope,2,0.92,0.95,0.935
+586,A sudden feeling of regret filled their heart.,regret,2,0.98,0.95,0.965
+587,The situation brought out deep lonely.,loneliness,2,0.92,0.95,0.935
+588,It was a moment marked by expressed sadness.,sadness,1,0.95,0.95,0.95
+593,It reflected a genuine feeling of anger.,anger,1,0.95,0.95,0.95
+594,They experienced mourning in a quiet moment.,sadness,1,0.92,0.95,0.935
+595,The situation brought out deep angry.,anger,1,0.95,0.95,0.95
+596,The situation brought out deep regret.,regret,2,0.95,0.95,0.95
+597,It reflected a genuine feeling of wonder.,awe,3,0.83,0.95,0.8899999999999999
+598,It was a moment marked by calmness.,inner_peace,3,0.92,0.95,0.935
+601,A sudden feeling of frightened filled their heart.,fear,1,0.92,0.95,0.935
+602,They experienced compassion in a quiet moment.,compassion,3,0.95,0.95,0.95
+603,They experienced awe in a quiet moment.,awe,3,0.92,1.0,0.96
+604,Everyone noticed the expressed joy in that moment.,joy,1,0.95,0.95,0.95
+605,That experience left them with lasting sad.,sadness,1,0.93,0.95,0.94
+607,It reflected a genuine feeling of regret.,regret,2,0.92,0.95,0.935
+608,Everyone noticed the happy in that moment.,joy,1,0.95,0.95,0.95
+609,There was a clear sense of grateful throughout the day.,gratitude,3,0.95,0.95,0.95
+611,It was a moment marked by compassionate.,compassion,3,0.95,0.95,0.95
+612,It was a moment marked by remorse.,regret,2,0.92,0.95,0.935
+613,There was a clear sense of felt sympathy throughout the day.,empathy,2,0.92,0.95,0.935
+614,There was a clear sense of remorse throughout the day.,regret,2,0.92,0.95,0.935
+616,There was a clear sense of hopeful throughout the day.,hope,2,0.92,0.95,0.935
+617,You could sense the expressed fear in their voice.,fear,1,0.93,0.95,0.94
+619,There was a clear sense of remorse throughout the day.,regret,2,0.92,0.95,0.935
+620,Everyone noticed the hope in that moment.,hope,2,0.92,0.95,0.935
+621,It reflected a genuine feeling of happiness.,joy,1,0.95,0.95,0.95
+623,Everyone noticed the furious in that moment.,anger,1,0.92,0.95,0.935
+625,They experienced connectedness in a quiet moment.,inner_peace,3,0.92,0.95,0.935
+626,A sudden feeling of calmness filled their heart.,inner_peace,3,0.92,0.95,0.935
+628,It was a moment marked by hopeful.,hope,2,0.95,0.95,0.95
+629,Everyone noticed the isolation in that moment.,loneliness,2,0.83,0.85,0.84
+630,They experienced delight in a quiet moment.,joy,1,0.95,0.95,0.95
+631,The situation brought out deep public anger.,anger,1,0.92,0.95,0.935
+633,A sudden feeling of gratitude filled their heart.,gratitude,3,0.95,0.95,0.95
+634,There was a clear sense of remorse throughout the day.,regret,2,0.92,0.95,0.935
+635,There was a clear sense of delight throughout the day.,joy,1,0.95,0.95,0.95
+638,There was a clear sense of grateful throughout the day.,gratitude,3,0.98,0.95,0.965
+639,A sudden feeling of terrified filled their heart.,fear,1,0.93,0.95,0.94
+640,It was a moment marked by expressed fear.,fear,1,0.95,0.95,0.95
+642,It reflected a genuine feeling of loneliness.,loneliness,2,0.93,0.95,0.94
+643,Everyone noticed the expressed hope in that moment.,hope,2,0.95,0.95,0.95
+644,It reflected a genuine feeling of compassion.,compassion,3,0.95,0.95,0.95
+645,They experienced felt regret in a quiet moment.,regret,2,0.92,0.95,0.935
+646,It was a moment marked by deeply moved.,sadness,1,0.85,0.95,0.8999999999999999
+648,A sudden feeling of sympathy filled their heart.,empathy,2,0.93,0.95,0.94
+649,You could sense the calmness in their voice.,inner_peace,3,0.83,0.95,0.8899999999999999
+651,The situation brought out deep sense of awe.,awe,3,0.92,0.95,0.935
+654,You could sense the inner peace in their voice.,inner_peace,3,0.92,0.95,0.935
+655,There was a clear sense of afraid throughout the day.,fear,1,0.92,0.95,0.935
+657,Everyone noticed the afraid in that moment.,fear,1,0.92,0.95,0.935
+658,They experienced outrage in a quiet moment.,anger,1,0.92,0.95,0.935
+659,They experienced loneliness in a quiet moment.,loneliness,2,0.92,0.95,0.935
+660,There was a clear sense of compassion throughout the day.,compassion,3,0.93,0.95,0.94
+661,A sudden feeling of wonder filled their heart.,awe,3,0.93,0.95,0.94
+663,A sudden feeling of gratitude filled their heart.,gratitude,3,0.92,0.95,0.935
+664,That experience left them with lasting calmness.,inner_peace,3,0.92,0.95,0.935
+667,There was a clear sense of mercy throughout the day.,compassion,3,0.92,0.95,0.935
+669,It reflected a genuine feeling of regret.,regret,2,0.95,0.95,0.95
+670,That experience left them with lasting regret.,regret,2,0.92,0.95,0.935
+671,They experienced regret in a quiet moment.,regret,2,0.98,0.95,0.965
+672,A sudden feeling of isolation filled their heart.,loneliness,2,0.92,0.95,0.935
+676,They experienced panic in a quiet moment.,fear,1,0.92,0.95,0.935
+677,There was a clear sense of outrage throughout the day.,anger,1,0.93,0.95,0.94
+679,It was a moment marked by wonder.,awe,3,0.92,0.95,0.935
+680,It reflected a genuine feeling of regret.,regret,2,0.95,0.95,0.95
+681,They experienced expressed fear in a quiet moment.,fear,1,0.95,0.95,0.95
+682,You could sense the wonder in their voice.,awe,3,0.92,0.95,0.935
+685,They experienced fear in a quiet moment.,fear,1,0.95,0.95,0.95
+687,It reflected a genuine feeling of afraid.,fear,1,0.98,0.95,0.965
+693,It was a moment marked by letting go.,sadness,1,0.83,0.95,0.8899999999999999
+694,You could sense the peace of mind in their voice.,inner_peace,3,0.92,0.95,0.935
+695,It reflected a genuine feeling of expressed regret.,regret,2,0.95,0.95,0.95
+698,The situation brought out deep terrified.,fear,1,0.95,0.95,0.95
+700,That experience left them with lasting sense of awe.,awe,3,0.95,0.95,0.95
+701,They experienced expressed gratitude in a quiet moment.,gratitude,3,0.95,0.95,0.95
+702,A sudden feeling of anger filled their heart.,anger,1,0.95,0.95,0.95
+704,The situation brought out deep panic.,fear,1,0.95,0.95,0.95
+705,The situation brought out deep fear.,fear,1,0.95,0.95,0.95
+706,Everyone noticed the public anger in that moment.,anger,1,0.93,0.95,0.94
+709,It was a moment marked by loneliness.,loneliness,2,0.93,1.0,0.9650000000000001
+710,That experience left them with lasting expressed hope.,hope,2,0.92,0.95,0.935
+712,A sudden feeling of inner peace filled their heart.,inner_peace,3,0.95,0.95,0.95
+714,It was a moment marked by afraid.,fear,1,0.92,0.95,0.935
+718,A sudden feeling of social isolation filled their heart.,loneliness,2,0.92,0.95,0.935
+719,There was a clear sense of afraid throughout the day.,fear,1,0.92,0.98,0.95
+720,There was a clear sense of expressed regret throughout the day.,regret,2,0.98,0.95,0.965
+721,It reflected a genuine feeling of social isolation.,loneliness,2,0.83,0.95,0.8899999999999999
+723,They experienced inner peace in a quiet moment.,inner_peace,3,0.92,0.95,0.935
+724,It reflected a genuine feeling of sadness.,sadness,1,0.95,0.95,0.95
+725,You could sense the frightened in their voice.,fear,1,0.93,0.95,0.94
+726,Everyone noticed the public anger in that moment.,anger,1,0.92,0.95,0.935
+727,You could sense the grateful in their voice.,gratitude,3,0.92,0.95,0.935
+728,A sudden feeling of gratitude filled their heart.,gratitude,3,0.93,0.95,0.94
+729,That experience left them with lasting sad.,sadness,1,0.92,0.95,0.935
+730,They experienced expressed regret in a quiet moment.,regret,2,0.92,0.95,0.935
+731,That experience left them with lasting calmness.,inner_peace,3,0.92,0.95,0.935
+732,That experience left them with lasting social isolation.,loneliness,2,0.92,0.85,0.885
+735,It was a moment marked by social isolation.,loneliness,2,0.83,0.95,0.8899999999999999
+736,The situation brought out deep sense of awe.,awe,3,0.92,0.95,0.935
+739,You could sense the expressed sadness in their voice.,sadness,1,0.92,0.95,0.935
+741,There was a clear sense of sadness throughout the day.,sadness,1,0.95,0.95,0.95
+744,The situation brought out deep lonely.,loneliness,2,0.95,0.95,0.95
+748,The situation brought out deep remorse.,regret,2,0.93,0.95,0.94
+749,Everyone noticed the remorse in that moment.,regret,2,0.92,0.95,0.935
+750,It reflected a genuine feeling of panic.,fear,1,0.92,0.95,0.935
+751,There was a clear sense of sad throughout the day.,sadness,1,0.95,0.95,0.95
+753,They experienced remorse in a quiet moment.,regret,2,0.92,0.95,0.935
+755,That experience left them with lasting sadness.,sadness,1,0.95,0.95,0.95
+756,A sudden feeling of expressed regret filled their heart.,regret,2,0.95,0.95,0.95
+757,It reflected a genuine feeling of expressed fear.,fear,1,0.98,0.95,0.965
+758,A sudden feeling of celebration filled their heart.,joy,1,0.92,0.95,0.935
+759,The situation brought out deep regret.,regret,2,0.92,0.95,0.935
+760,It reflected a genuine feeling of terrified.,fear,1,0.95,0.95,0.95
+763,A sudden feeling of anger filled their heart.,anger,1,0.95,0.98,0.965
+765,They experienced sad in a quiet moment.,sadness,1,0.95,0.95,0.95
+766,There was a clear sense of peace of mind throughout the day.,inner_peace,3,0.93,0.95,0.94
+767,A sudden feeling of inner peace filled their heart.,inner_peace,3,0.93,0.98,0.9550000000000001
+769,The situation brought out deep hopeful.,hope,2,0.95,0.95,0.95
+770,They experienced celebration in a quiet moment.,joy,1,0.95,0.95,0.95
+771,The situation brought out deep sadness.,sadness,1,0.95,0.95,0.95
+772,It was a moment marked by regret.,regret,2,0.9,0.95,0.925
+774,Everyone noticed the grief in that moment.,sadness,1,0.93,0.95,0.94
+776,Everyone noticed the sense of awe in that moment.,awe,3,0.93,1.0,0.9650000000000001
+777,Everyone noticed the angry in that moment.,anger,1,0.93,0.95,0.94
+778,That experience left them with lasting sign of hope.,hope,2,0.93,0.95,0.94
+779,That experience left them with lasting awe.,awe,3,0.95,0.95,0.95
+780,You could sense the loneliness in their voice.,loneliness,2,0.92,0.95,0.935
+782,It was a moment marked by happiness.,joy,1,0.92,0.95,0.935
+783,A sudden feeling of sign of hope filled their heart.,hope,2,0.95,0.95,0.95
+785,That experience left them with lasting letting go.,sadness,1,0.92,0.95,0.935
+786,It was a moment marked by wonder.,awe,3,0.95,0.95,0.95
+788,It reflected a genuine feeling of happiness.,joy,1,0.95,0.95,0.95
+789,That experience left them with lasting delight.,joy,1,0.93,0.95,0.94
+790,It reflected a genuine feeling of expressed joy.,joy,1,0.95,0.95,0.95
+793,You could sense the remorse in their voice.,regret,2,0.92,0.95,0.935
+794,Everyone noticed the grateful in that moment.,gratitude,3,0.92,0.95,0.935
+795,That experience left them with lasting compassion.,compassion,3,0.95,0.95,0.95
+796,Everyone noticed the afraid in that moment.,fear,1,0.92,0.95,0.935
+799,It reflected a genuine feeling of regret.,regret,2,0.93,0.95,0.94
+800,It was a moment marked by angry.,anger,1,0.93,0.95,0.94
+802,The situation brought out deep compassion.,compassion,3,0.95,0.95,0.95
+803,It was a moment marked by awe.,awe,3,0.95,0.95,0.95
+804,A sudden feeling of sense of awe filled their heart.,awe,3,0.92,0.95,0.935
+808,They experienced expressed gratitude in a quiet moment.,gratitude,3,0.95,0.95,0.95
+809,That experience left them with lasting thankful.,gratitude,3,0.95,0.95,0.95
+810,It reflected a genuine feeling of acceptance.,inner_peace,3,0.92,0.95,0.935
+812,It reflected a genuine feeling of expressed fear.,fear,1,0.92,0.95,0.935
+813,It reflected a genuine feeling of expressed gratitude.,gratitude,3,0.95,0.95,0.95
+815,The situation brought out deep sign of hope.,hope,2,0.92,0.95,0.935
+816,There was a clear sense of expressed anger throughout the day.,anger,1,0.92,0.95,0.935
+817,It reflected a genuine feeling of compassionate.,compassion,3,0.95,0.95,0.95
+819,Everyone noticed the letting go in that moment.,sadness,1,0.83,0.95,0.8899999999999999
+821,It reflected a genuine feeling of expressed anger.,anger,1,0.95,0.95,0.95
+822,You could sense the grief in their voice.,sadness,1,0.93,0.95,0.94
+823,A sudden feeling of regret filled their heart.,regret,2,0.95,0.95,0.95
+824,The situation brought out deep isolation.,loneliness,2,0.93,0.95,0.94
+825,There was a clear sense of afraid throughout the day.,fear,1,0.92,0.95,0.935
+826,It was a moment marked by hopeful.,hope,2,0.92,0.95,0.935
+827,That experience left them with lasting expressed regret.,regret,2,0.95,0.95,0.95
+828,The situation brought out deep sadness.,sadness,1,0.95,0.95,0.95
+830,It was a moment marked by wonder.,awe,3,0.92,0.95,0.935
+831,Everyone noticed the sense of awe in that moment.,awe,3,0.93,0.95,0.94
+832,A sudden feeling of sympathy filled their heart.,empathy,2,0.95,0.95,0.95
+833,It reflected a genuine feeling of wonder.,awe,3,0.95,0.95,0.95
+834,Everyone noticed the expressed fear in that moment.,fear,1,0.92,0.95,0.935
+836,A sudden feeling of panic filled their heart.,fear,1,0.92,0.95,0.935
+837,It was a moment marked by gratitude.,gratitude,3,0.95,0.95,0.95
+838,You could sense the public anger in their voice.,anger,1,0.92,0.95,0.935
+839,There was a clear sense of happiness throughout the day.,joy,1,0.92,0.95,0.935
+840,A sudden feeling of terrified filled their heart.,fear,1,0.98,0.95,0.965
+841,It reflected a genuine feeling of loneliness.,loneliness,2,0.95,0.95,0.95
+842,The situation brought out deep furious.,anger,1,0.92,0.95,0.935
+843,The situation brought out deep grateful.,gratitude,3,0.93,0.85,0.89
+844,It reflected a genuine feeling of sense of awe.,awe,3,0.95,0.95,0.95
+845,Everyone noticed the regret in that moment.,regret,2,0.95,0.95,0.95
+846,Everyone noticed the felt regret in that moment.,regret,2,0.92,0.95,0.935
+847,It reflected a genuine feeling of panic.,fear,1,0.92,0.95,0.935
+848,A sudden feeling of terrified filled their heart.,fear,1,0.98,0.98,0.98
+849,There was a clear sense of isolation throughout the day.,loneliness,2,0.92,0.95,0.935
+850,Everyone noticed the anger in that moment.,anger,1,0.93,0.95,0.94
+851,A sudden feeling of expressed hope filled their heart.,hope,2,0.98,0.95,0.965
+853,There was a clear sense of happiness throughout the day.,joy,1,0.95,0.98,0.965
+854,You could sense the furious in their voice.,anger,1,0.92,0.95,0.935
+859,It was a moment marked by hope.,hope,2,0.98,0.95,0.965
+860,You could sense the felt regret in their voice.,regret,2,0.92,0.95,0.935
+863,There was a clear sense of expressed regret throughout the day.,regret,2,0.95,0.95,0.95
+864,It reflected a genuine feeling of gratitude.,gratitude,3,0.95,0.95,0.95
+866,The situation brought out deep sense of awe.,awe,3,0.92,0.95,0.935
+868,A sudden feeling of regret filled their heart.,regret,2,0.95,0.95,0.95
+869,A sudden feeling of outrage filled their heart.,anger,1,0.93,0.95,0.94
+870,A sudden feeling of thankful filled their heart.,gratitude,3,0.95,0.95,0.95
+872,It was a moment marked by isolation.,loneliness,2,0.92,0.95,0.935
+873,You could sense the awe in their voice.,awe,3,0.93,0.95,0.94
+874,A sudden feeling of sense of awe filled their heart.,awe,3,0.98,0.98,0.98
+875,You could sense the inner peace in their voice.,inner_peace,3,0.95,0.95,0.95
+877,Everyone noticed the sense of awe in that moment.,awe,3,0.95,1.0,0.975
+879,There was a clear sense of hope throughout the day.,hope,2,0.93,0.95,0.94
+880,Everyone noticed the expressed joy in that moment.,joy,1,0.92,0.95,0.935
+881,They experienced isolation in a quiet moment.,loneliness,2,0.92,0.95,0.935
+882,You could sense the hopeful in their voice.,hope,2,0.83,0.95,0.8899999999999999
+883,Everyone noticed the expressed gratitude in that moment.,gratitude,3,0.95,0.95,0.95
+884,It reflected a genuine feeling of empathy.,empathy,2,0.98,0.95,0.965
+885,A sudden feeling of delight filled their heart.,joy,1,0.93,0.95,0.94
+887,There was a clear sense of thankful throughout the day.,gratitude,3,0.92,0.95,0.935
+888,The situation brought out deep joy.,joy,1,0.98,0.98,0.98
+889,That experience left them with lasting gratitude.,gratitude,3,0.95,0.95,0.95
+890,You could sense the letting go in their voice.,sadness,1,0.92,0.85,0.885
+891,It reflected a genuine feeling of remorse.,regret,2,0.92,0.95,0.935
+893,They experienced expressed joy in a quiet moment.,joy,1,0.95,0.95,0.95
+894,It reflected a genuine feeling of expressed fear.,fear,1,0.95,0.95,0.95
+895,Everyone noticed the expressed gratitude in that moment.,gratitude,3,0.95,0.95,0.95
+896,They experienced wonder in a quiet moment.,awe,3,0.92,0.95,0.935
+897,It reflected a genuine feeling of expressed anger.,anger,1,0.95,0.95,0.95
+898,There was a clear sense of grateful throughout the day.,gratitude,3,0.92,0.95,0.935
+900,They experienced gratitude in a quiet moment.,gratitude,3,0.92,0.95,0.935
+901,The situation brought out deep grief.,sadness,1,0.92,0.95,0.935
+903,A sudden feeling of felt regret filled their heart.,regret,2,0.95,0.95,0.95
+904,Everyone noticed the peace of mind in that moment.,inner_peace,3,0.92,0.95,0.935
+905,It reflected a genuine feeling of public anger.,anger,1,0.92,0.95,0.935
+906,It reflected a genuine feeling of public anger.,anger,1,0.93,0.95,0.94
+907,A sudden feeling of deeply moved filled their heart.,awe,3,0.85,0.95,0.8999999999999999
+909,It was a moment marked by expressed hope.,hope,2,0.98,0.95,0.965
+910,It was a moment marked by grateful.,gratitude,3,0.95,0.95,0.95
+912,That experience left them with lasting furious.,anger,1,0.92,0.95,0.935
+913,There was a clear sense of felt regret throughout the day.,regret,2,0.93,0.95,0.94
+914,The situation brought out deep hopeful.,hope,2,0.83,0.95,0.8899999999999999
+918,A sudden feeling of expressed regret filled their heart.,regret,2,0.95,0.95,0.95
+919,There was a clear sense of sad throughout the day.,sadness,1,0.92,0.95,0.935
+921,You could sense the sympathy in their voice.,empathy,2,0.92,0.95,0.935
+922,There was a clear sense of anger throughout the day.,anger,1,0.95,0.95,0.95
+923,It reflected a genuine feeling of public anger.,anger,1,0.9,0.95,0.925
+925,Everyone noticed the expressed joy in that moment.,joy,1,0.92,0.95,0.935
+926,It was a moment marked by social isolation.,loneliness,2,0.82,0.95,0.885
+927,You could sense the happiness in their voice.,joy,1,0.93,0.95,0.94
+928,The situation brought out deep felt sympathy.,empathy,2,0.92,0.95,0.935
+929,Everyone noticed the expressed fear in that moment.,fear,1,0.83,0.95,0.8899999999999999
+930,That experience left them with lasting furious.,anger,1,0.95,0.85,0.8999999999999999
+931,You could sense the delight in their voice.,joy,1,0.95,0.95,0.95
+932,There was a clear sense of empathy throughout the day.,empathy,2,0.95,0.95,0.95
+933,They experienced thankful in a quiet moment.,gratitude,3,0.92,0.95,0.935
+934,It reflected a genuine feeling of afraid.,fear,1,0.95,0.95,0.95
+936,It reflected a genuine feeling of angry.,anger,1,0.93,0.95,0.94
+939,You could sense the hopeful in their voice.,hope,2,0.92,0.95,0.935
+940,It reflected a genuine feeling of lonely.,loneliness,2,0.93,0.95,0.94
+941,You could sense the delight in their voice.,joy,1,0.95,0.95,0.95
+943,Everyone noticed the mourning in that moment.,sadness,1,0.92,0.95,0.935
+944,They experienced expressed joy in a quiet moment.,joy,1,0.95,0.95,0.95
+945,The situation brought out deep social isolation.,loneliness,2,0.92,0.95,0.935
+946,It reflected a genuine feeling of expressed hope.,hope,2,0.93,0.95,0.94
+949,They experienced afraid in a quiet moment.,fear,1,0.83,0.95,0.8899999999999999
+950,They experienced heartbroken in a quiet moment.,sadness,1,0.92,0.95,0.935
+951,There was a clear sense of lonely throughout the day.,loneliness,2,0.95,0.95,0.95
+952,It reflected a genuine feeling of isolation.,loneliness,2,0.93,0.95,0.94
+953,That experience left them with lasting sad.,sadness,1,0.95,0.95,0.95
+954,The situation brought out deep loneliness.,loneliness,2,0.95,0.95,0.95
+955,You could sense the delight in their voice.,joy,1,0.92,0.95,0.935
+956,It reflected a genuine feeling of social isolation.,loneliness,2,0.83,0.95,0.8899999999999999
+959,That experience left them with lasting expressed regret.,regret,2,0.95,0.95,0.95
+960,That experience left them with lasting lonely.,loneliness,2,0.92,0.95,0.935
+961,The situation brought out deep peace of mind.,inner_peace,3,0.92,0.95,0.935
+962,Everyone noticed the peace of mind in that moment.,inner_peace,3,0.92,0.95,0.935
+966,The situation brought out deep happy.,joy,1,0.92,0.95,0.935
+967,A sudden feeling of hope filled their heart.,hope,2,0.95,0.95,0.95
+968,There was a clear sense of expressed regret throughout the day.,regret,2,0.92,0.95,0.935
+970,It reflected a genuine feeling of loneliness.,loneliness,2,0.93,0.95,0.94
+971,That experience left them with lasting mercy.,compassion,3,0.92,0.95,0.935
+972,There was a clear sense of sadness throughout the day.,sadness,1,0.92,0.99,0.9550000000000001
+973,It was a moment marked by inner peace.,inner_peace,3,0.95,0.95,0.95
+974,They experienced sadness in a quiet moment.,sadness,1,0.92,0.95,0.935
+975,You could sense the social isolation in their voice.,loneliness,2,0.82,0.85,0.835
+976,It was a moment marked by felt sympathy.,empathy,2,0.95,0.95,0.95
+977,A sudden feeling of heartbroken filled their heart.,sadness,1,0.93,0.95,0.94
+978,You could sense the social isolation in their voice.,loneliness,2,0.92,0.95,0.935
+979,You could sense the happiness in their voice.,joy,1,0.92,0.85,0.885
+982,It reflected a genuine feeling of felt sympathy.,empathy,2,0.95,0.95,0.95
+984,It reflected a genuine feeling of heartbroken.,sadness,1,0.95,0.95,0.95
+985,There was a clear sense of grief throughout the day.,sadness,1,0.92,0.95,0.935
+986,There was a clear sense of expressed gratitude throughout the day.,gratitude,3,0.93,1.0,0.9650000000000001
+987,That experience left them with lasting hopeful.,hope,2,0.95,0.95,0.95
+988,You could sense the lonely in their voice.,loneliness,2,0.93,0.95,0.94
+989,It reflected a genuine feeling of expressed anger.,anger,1,0.93,0.95,0.94
+990,You could sense the gratitude in their voice.,gratitude,3,0.92,0.95,0.935
+991,Everyone noticed the peace of mind in that moment.,inner_peace,3,0.92,0.95,0.935
+992,There was a clear sense of awe throughout the day.,awe,3,0.95,0.95,0.95
+993,Everyone noticed the thankful in that moment.,gratitude,3,0.95,0.95,0.95
+994,There was a clear sense of thankful throughout the day.,gratitude,3,0.92,0.95,0.935
+995,You could sense the compassionate in their voice.,compassion,3,0.92,0.95,0.935
+996,That experience left them with lasting regret.,regret,2,0.95,0.95,0.95
+997,They experienced angry in a quiet moment.,anger,1,0.95,0.95,0.95
+999,They experienced social isolation in a quiet moment.,loneliness,2,0.85,0.95,0.8999999999999999
+1000,That experience left them with lasting sign of hope.,hope,2,0.92,0.95,0.935
+1001,Everyone noticed the thankful in that moment.,gratitude,3,0.93,0.95,0.94
+1002,The situation brought out deep peace of mind.,inner_peace,3,0.92,0.95,0.935
+1003,Everyone noticed the heartbroken in that moment.,sadness,1,0.93,0.95,0.94
+1004,It was a moment marked by furious.,anger,1,0.83,0.95,0.8899999999999999
+1005,That experience left them with lasting delight.,joy,1,0.95,0.95,0.95
+1006,Everyone noticed the inner peace in that moment.,inner_peace,3,0.95,0.95,0.95
+1007,The situation brought out deep regret.,regret,2,0.93,0.95,0.94
+1009,That experience left them with lasting peace of mind.,inner_peace,3,0.92,0.95,0.935
+1018,The situation brought out deep felt regret.,regret,2,0.95,0.95,0.95
+1019,A sudden feeling of afraid filled their heart.,fear,1,0.95,0.95,0.95
+1022,It reflected a genuine feeling of grief.,sadness,1,0.92,0.95,0.935
+1023,It was a moment marked by remorse.,regret,2,0.92,0.95,0.935
+1025,That experience left them with lasting fear.,fear,1,0.92,0.95,0.935
+1026,That experience left them with lasting deeply moved.,sadness,1,0.82,0.95,0.885
+1029,They experienced expressed gratitude in a quiet moment.,gratitude,3,0.95,0.95,0.95
+1031,There was a clear sense of remorse throughout the day.,regret,2,0.92,0.95,0.935
+1032,The situation brought out deep expressed regret.,regret,2,0.92,0.95,0.935
+1033,It was a moment marked by sign of hope.,hope,2,0.92,0.95,0.935
+1034,Everyone noticed the fear in that moment.,fear,1,0.95,0.95,0.95
+1035,Everyone noticed the furious in that moment.,anger,1,0.92,0.95,0.935
+1036,That experience left them with lasting wonder.,awe,3,0.92,0.95,0.935
+1037,The situation brought out deep wonder.,awe,3,0.83,0.95,0.8899999999999999
+1039,It reflected a genuine feeling of loneliness.,loneliness,2,0.95,0.95,0.95
+1040,They experienced empathy in a quiet moment.,empathy,2,0.95,0.95,0.95
+1043,There was a clear sense of expressed gratitude throughout the day.,gratitude,3,0.95,0.95,0.95
+1044,That experience left them with lasting grief.,sadness,1,0.95,0.95,0.95
+1046,You could sense the furious in their voice.,anger,1,0.93,0.95,0.94
+1049,It reflected a genuine feeling of anger.,anger,1,0.95,0.95,0.95
+1050,Everyone noticed the outrage in that moment.,anger,1,0.83,0.85,0.84
+1051,You could sense the thankful in their voice.,gratitude,3,0.92,0.95,0.935
+1052,You could sense the expressed gratitude in their voice.,gratitude,3,0.92,0.95,0.935
+1053,Everyone noticed the expressed fear in that moment.,fear,1,0.83,0.95,0.8899999999999999
+1054,Everyone noticed the terrified in that moment.,fear,1,0.95,0.95,0.95
+1055,There was a clear sense of regret throughout the day.,regret,2,0.95,0.95,0.95
+1057,That experience left them with lasting expressed hope.,hope,2,0.92,0.95,0.935
+1058,The situation brought out deep hope.,hope,2,0.98,0.95,0.965
+1059,Everyone noticed the mourning in that moment.,sadness,1,0.83,0.95,0.8899999999999999
+1060,A sudden feeling of furious filled their heart.,anger,1,0.95,0.95,0.95
+1061,It reflected a genuine feeling of hope.,hope,2,0.95,0.95,0.95
+1062,It was a moment marked by remorse.,regret,2,0.92,0.95,0.935
+1063,It reflected a genuine feeling of loneliness.,loneliness,2,0.95,0.95,0.95
+1064,The situation brought out deep afraid.,fear,1,0.92,0.85,0.885
+1066,You could sense the compassionate in their voice.,compassion,3,0.92,0.95,0.935
+1069,There was a clear sense of thankful throughout the day.,gratitude,3,0.92,0.95,0.935
+1070,There was a clear sense of terrified throughout the day.,fear,1,0.92,0.95,0.935
+1071,They experienced letting go in a quiet moment.,inner_peace,3,0.85,0.95,0.8999999999999999
+1072,A sudden feeling of remorse filled their heart.,regret,2,0.92,0.95,0.935
+1073,You could sense the happy in their voice.,joy,1,0.92,0.95,0.935
+1074,A sudden feeling of felt regret filled their heart.,regret,2,0.95,0.95,0.95
+1077,The situation brought out deep hopeful.,hope,2,0.93,0.95,0.94
+1079,It was a moment marked by hopeful.,hope,2,0.93,0.95,0.94
+1080,You could sense the joy in their voice.,joy,1,0.92,0.95,0.935
+1081,A sudden feeling of felt sympathy filled their heart.,empathy,2,0.92,0.95,0.935
+1083,The situation brought out deep felt regret.,regret,2,0.93,0.95,0.94
+1084,It was a moment marked by anger.,anger,1,0.95,0.95,0.95
+1085,It was a moment marked by panic.,fear,1,0.92,0.95,0.935
+1086,They experienced calmness in a quiet moment.,inner_peace,3,0.92,0.95,0.935
+1087,Everyone noticed the thankful in that moment.,gratitude,3,0.92,0.95,0.935
+1088,It reflected a genuine feeling of public anger.,anger,1,0.92,0.95,0.935
+1091,You could sense the expressed gratitude in their voice.,gratitude,3,0.93,0.95,0.94
+1092,The situation brought out deep empathy.,empathy,2,0.95,0.95,0.95
+1093,There was a clear sense of hope throughout the day.,hope,2,0.95,0.95,0.95
+1095,They experienced thankful in a quiet moment.,gratitude,3,0.92,0.95,0.935
+1096,It was a moment marked by expressed regret.,regret,2,0.95,0.95,0.95
+1097,Everyone noticed the celebration in that moment.,joy,1,0.92,0.95,0.935
+1098,They experienced empathy in a quiet moment.,empathy,2,0.95,0.95,0.95
+1099,They experienced angry in a quiet moment.,anger,1,0.83,0.95,0.8899999999999999
+1100,There was a clear sense of panic throughout the day.,fear,1,0.92,0.95,0.935
+1101,They experienced isolation in a quiet moment.,loneliness,2,0.92,0.95,0.935
+1103,It was a moment marked by gratitude.,gratitude,3,0.95,1.0,0.975
+1104,The situation brought out deep letting go.,sadness,1,0.87,0.95,0.9099999999999999
+1105,They experienced sadness in a quiet moment.,sadness,1,0.95,0.95,0.95
+1106,That experience left them with lasting furious.,anger,1,0.92,0.95,0.935
+1107,They experienced sense of awe in a quiet moment.,awe,3,0.95,0.95,0.95
+1108,They experienced furious in a quiet moment.,anger,1,0.92,0.95,0.935
+1109,The situation brought out deep deeply moved.,sadness,1,0.92,0.85,0.885
+1110,You could sense the remorse in their voice.,regret,2,0.92,0.95,0.935
+1112,You could sense the delight in their voice.,joy,1,0.92,0.85,0.885
+1116,There was a clear sense of expressed hope throughout the day.,hope,2,0.98,0.95,0.965
+1118,The situation brought out deep remorse.,regret,2,0.95,0.95,0.95
+1119,You could sense the happiness in their voice.,joy,1,0.92,0.85,0.885
+1120,You could sense the grateful in their voice.,gratitude,3,0.93,0.95,0.94
+1121,They experienced joy in a quiet moment.,joy,1,0.92,0.95,0.935
+1122,It reflected a genuine feeling of compassionate.,compassion,3,0.92,0.95,0.935
+1124,They experienced lonely in a quiet moment.,loneliness,2,0.92,0.95,0.935
+1126,They experienced felt regret in a quiet moment.,regret,2,0.92,0.95,0.935
+1127,You could sense the expressed gratitude in their voice.,gratitude,3,0.92,0.95,0.935
+1128,A sudden feeling of expressed joy filled their heart.,joy,1,0.95,0.95,0.95
+1129,They experienced happy in a quiet moment.,joy,1,0.92,0.95,0.935
+1130,A sudden feeling of isolation filled their heart.,loneliness,2,0.92,0.95,0.935
+1133,Everyone noticed the mourning in that moment.,sadness,1,0.95,0.95,0.95
+1135,It reflected a genuine feeling of outrage.,anger,1,0.92,0.95,0.935
+1136,They experienced hope in a quiet moment.,hope,2,0.93,0.95,0.94
+1137,It reflected a genuine feeling of expressed regret.,regret,2,0.92,0.95,0.935
+1139,It was a moment marked by hopeful.,hope,2,0.92,0.95,0.935
+1140,There was a clear sense of grateful throughout the day.,gratitude,3,0.95,0.95,0.95
+1142,Everyone noticed the expressed hope in that moment.,hope,2,0.95,0.95,0.95
+1143,The situation brought out deep sense of awe.,awe,3,0.95,0.95,0.95
+1146,That experience left them with lasting frightened.,fear,1,0.93,0.95,0.94
+1148,It reflected a genuine feeling of grateful.,gratitude,3,0.98,0.95,0.965
+1149,It was a moment marked by outrage.,anger,1,0.92,0.95,0.935
+1150,You could sense the heartbroken in their voice.,sadness,1,0.92,0.95,0.935
+1154,You could sense the wonder in their voice.,awe,3,0.92,0.95,0.935
+1155,That experience left them with lasting compassion.,compassion,3,0.95,0.95,0.95
+1156,Everyone noticed the remorse in that moment.,regret,2,0.93,0.95,0.94
+1158,It reflected a genuine feeling of sign of hope.,hope,2,0.92,0.95,0.935
+1159,It reflected a genuine feeling of compassionate.,compassion,3,0.95,0.95,0.95
+1160,It reflected a genuine feeling of sad.,sadness,1,0.95,0.95,0.95
+1161,It was a moment marked by compassion.,compassion,3,0.95,0.95,0.95
+1163,That experience left them with lasting empathy.,empathy,2,0.95,0.95,0.95
+1165,It reflected a genuine feeling of inner peace.,inner_peace,3,0.95,0.98,0.965
+1167,They experienced anger in a quiet moment.,anger,1,0.9,0.95,0.925
+1168,There was a clear sense of grief throughout the day.,sadness,1,0.93,0.98,0.9550000000000001
+1169,That experience left them with lasting happy.,joy,1,0.92,0.95,0.935
+1170,The situation brought out deep terrified.,fear,1,0.92,0.95,0.935
+1171,That experience left them with lasting isolation.,loneliness,2,0.83,0.95,0.8899999999999999
+1172,It was a moment marked by expressed sadness.,sadness,1,0.92,0.95,0.935
+1173,Everyone noticed the loneliness in that moment.,loneliness,2,0.95,0.95,0.95
+1174,You could sense the awe in their voice.,awe,3,0.95,0.95,0.95
+1176,A sudden feeling of thankful filled their heart.,gratitude,3,0.95,0.95,0.95
+1177,That experience left them with lasting expressed regret.,regret,2,0.95,0.95,0.95
+1179,It was a moment marked by hope.,hope,2,0.93,0.95,0.94
+1180,There was a clear sense of calmness throughout the day.,inner_peace,3,0.92,0.95,0.935
+1181,There was a clear sense of frightened throughout the day.,fear,1,0.93,0.95,0.94
+1182,You could sense the loneliness in their voice.,loneliness,2,0.93,0.95,0.94
+1183,They experienced awe in a quiet moment.,awe,3,0.93,1.0,0.9650000000000001
+1185,A sudden feeling of isolation filled their heart.,loneliness,2,0.92,0.95,0.935
+1187,The situation brought out deep sense of awe.,awe,3,0.93,0.95,0.94
+1188,You could sense the outrage in their voice.,anger,1,0.92,0.85,0.885
+1189,A sudden feeling of sign of hope filled their heart.,hope,2,0.93,0.95,0.94
+1190,It was a moment marked by expressed joy.,joy,1,0.95,0.95,0.95
+1191,Everyone noticed the loneliness in that moment.,loneliness,2,0.95,0.95,0.95
+1193,A sudden feeling of grief filled their heart.,sadness,1,0.93,0.95,0.94
+1194,You could sense the panic in their voice.,fear,1,0.92,0.95,0.935
+1195,The situation brought out deep celebration.,joy,1,0.95,0.95,0.95
+1196,That experience left them with lasting expressed anger.,anger,1,0.95,0.95,0.95
+1197,Everyone noticed the gratitude in that moment.,gratitude,3,0.98,0.95,0.965
+1198,It was a moment marked by hopeful.,hope,2,0.92,0.95,0.935
+1199,There was a clear sense of fear throughout the day.,fear,1,0.95,0.95,0.95
