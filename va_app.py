@@ -1,7 +1,10 @@
 import streamlit as st
 import pandas as pd
-import random
 import os
+
+# ====== Google Sheets ======
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
 # ====== 設定 ======
 FILE_PATH = "output/high_quality_dataset.csv"
@@ -11,6 +14,24 @@ EMOTIONS = [
     "regret", "hope", "loneliness", "empathy",
     "awe", "gratitude", "inner_peace", "compassion"
 ]
+
+# ====== Google Sheets 連線（用 secrets）======
+scope = [
+    "https://spreadsheets.google.com/feeds",
+    "https://www.googleapis.com/auth/drive"
+]
+
+creds_dict = st.secrets["gcp_service_account"]
+
+creds = ServiceAccountCredentials.from_json_keyfile_dict(
+    creds_dict, scope
+)
+
+client = gspread.authorize(creds)
+
+# ⚠️ 改成你的試算表名稱
+sheet = client.open("validation_results").sheet1
+
 
 # ====== 初始化 Session ======
 if "data" not in st.session_state:
@@ -23,10 +44,13 @@ if "data" not in st.session_state:
 # ====== UI ======
 st.title("📊 情緒分類人工驗證系統")
 
+# 👉 使用者名稱
+user_name = st.text_input("請輸入你的名字：")
+
 # ====== 顯示進度 ======
 st.write(f"進度：{st.session_state.index + 1} / {len(st.session_state.sample)}")
 
-# ====== 當還有題目 ======
+# ====== 還有題目 ======
 if st.session_state.index < len(st.session_state.sample):
 
     row = st.session_state.sample.iloc[st.session_state.index]
@@ -38,24 +62,43 @@ if st.session_state.index < len(st.session_state.sample):
 
     if st.button("提交答案"):
 
+        # ====== 防呆 ======
+        if not user_name:
+            st.warning("⚠️ 請先輸入名字")
+            st.stop()
+
         correct_answer = row["emotion"]
         is_correct = (user_emotion == correct_answer)
 
         if is_correct:
             st.session_state.correct += 1
 
+        # ====== 寫入 Google Sheets ======
+        try:
+            sheet.append_row([
+                user_name,
+                row["sentence"],
+                correct_answer,
+                user_emotion,
+                is_correct
+            ])
+        except Exception as e:
+            st.error(f"寫入 Google Sheets 失敗：{e}")
+
+        # ====== 本地紀錄 ======
         st.session_state.results.append({
+            "user": user_name,
             "sentence": row["sentence"],
             "model_emotion": correct_answer,
             "human_emotion": user_emotion,
             "correct": is_correct
         })
 
+        # ====== 顯示結果 ======
         st.success(f"正確答案：{correct_answer}")
         st.write("✔ 正確" if is_correct else "❌ 錯誤")
 
         st.session_state.index += 1
-
         st.rerun()
 
 # ====== 全部完成 ======
@@ -70,7 +113,7 @@ else:
     st.write(f"正確數：{correct}")
     st.write(f"準確率：{acc:.2%}")
 
-    # ====== 儲存結果 ======
+    # ====== 本地儲存 ======
     result_df = pd.DataFrame(st.session_state.results)
 
     os.makedirs("output", exist_ok=True)
@@ -83,6 +126,7 @@ else:
         mime="text/csv"
     )
 
+    # ====== 重新開始 ======
     if st.button("重新開始"):
         st.session_state.clear()
         st.rerun()
