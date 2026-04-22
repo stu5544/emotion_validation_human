@@ -30,7 +30,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(
 client = gspread.authorize(creds)
 
 # ⚠️ 改成你的試算表名稱
-sheet = client.open("validation_results").sheet1
+sheet = client.open_by_key("1BjiqJNwUE4ZeCxBtYRJ3qLUBym_2bAhHEZa93zWol1c").sheet1
 
 
 # ====== 初始化 Session ======
