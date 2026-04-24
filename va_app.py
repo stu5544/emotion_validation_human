@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+import time
 
 # ====== Google Sheets ======
 import gspread
@@ -15,7 +16,7 @@ EMOTIONS = [
     "awe", "gratitude", "inner_peace", "compassion"
 ]
 
-# ====== Google Sheets 連線（用 secrets）======
+# ====== Google Sheets 連線 ======
 scope = [
     "https://spreadsheets.google.com/feeds",
     "https://www.googleapis.com/auth/drive"
@@ -29,9 +30,11 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(
 
 client = gspread.authorize(creds)
 
-# ⚠️ 改成你的試算表名稱
-sheet = client.open_by_key("1BjiqJNwUE4ZeCxBtYRJ3qLUBym_2bAhHEZa93zWol1c").sheet1
+# 🔥 改成你的 sheet_id（強烈建議）
+SHEET_ID = "1BjiqJNwUE4ZeCxBtYRJ3qLUBym_2bAhHEZa93zWol1c"
 
+sheet = client.open_by_key(SHEET_ID).sheet1
+stats_sheet = client.open_by_key(SHEET_ID).worksheet("user_stats")
 
 # ====== 初始化 Session ======
 if "data" not in st.session_state:
@@ -41,13 +44,27 @@ if "data" not in st.session_state:
     st.session_state.correct = 0
     st.session_state.results = []
 
+# ====== 使用者名稱（只輸入一次）======
+if "user_name" not in st.session_state:
+    st.session_state.user_name = ""
+
+if not st.session_state.user_name:
+    st.title("📊 情緒分類人工驗證系統")
+    name_input = st.text_input("請輸入你的名字：")
+
+    if st.button("開始測驗"):
+        if name_input:
+            st.session_state.user_name = name_input
+            st.rerun()
+        else:
+            st.warning("⚠️ 請輸入名字")
+
+    st.stop()
+
 # ====== UI ======
 st.title("📊 情緒分類人工驗證系統")
 
-# 👉 使用者名稱
-user_name = st.text_input("請輸入你的名字：")
-
-# ====== 顯示進度 ======
+st.write(f"👤 使用者：{st.session_state.user_name}")
 st.write(f"進度：{st.session_state.index + 1} / {len(st.session_state.sample)}")
 
 # ====== 還有題目 ======
@@ -62,39 +79,21 @@ if st.session_state.index < len(st.session_state.sample):
 
     if st.button("提交答案"):
 
-        # ====== 防呆 ======
-        if not user_name:
-            st.warning("⚠️ 請先輸入名字")
-            st.stop()
-
         correct_answer = row["emotion"]
         is_correct = (user_emotion == correct_answer)
 
         if is_correct:
             st.session_state.correct += 1
 
-        # ====== 寫入 Google Sheets ======
-        try:
-            sheet.append_row([
-                user_name,
-                row["sentence"],
-                correct_answer,
-                user_emotion,
-                is_correct
-            ])
-        except Exception as e:
-            st.error(f"寫入 Google Sheets 失敗：{e}")
-
-        # ====== 本地紀錄 ======
+        # 👉 存到 session（不立即寫入）
         st.session_state.results.append({
-            "user": user_name,
+            "user": st.session_state.user_name,
             "sentence": row["sentence"],
             "model_emotion": correct_answer,
             "human_emotion": user_emotion,
             "correct": is_correct
         })
 
-        # ====== 顯示結果 ======
         st.success(f"正確答案：{correct_answer}")
         st.write("✔ 正確" if is_correct else "❌ 錯誤")
 
@@ -109,9 +108,42 @@ else:
     correct = st.session_state.correct
     acc = correct / total
 
+    st.write(f"👤 使用者：{st.session_state.user_name}")
     st.write(f"總題數：{total}")
     st.write(f"正確數：{correct}")
     st.write(f"準確率：{acc:.2%}")
+
+    # ====== 批次寫入 Google Sheets ======
+    try:
+        rows = []
+        for r in st.session_state.results:
+            rows.append([
+                r["user"],
+                r["sentence"],
+                r["model_emotion"],
+                r["human_emotion"],
+                r["correct"]
+            ])
+
+        sheet.append_rows(rows)
+
+        st.success("✅ 詳細資料已寫入 Google Sheets")
+
+    except Exception as e:
+        st.error(f"寫入詳細資料失敗：{e}")
+
+    # ====== 寫入使用者統計 ======
+    try:
+        stats_sheet.append_row([
+            st.session_state.user_name,
+            total,
+            correct,
+            acc
+        ])
+        st.success("✅ 使用者統計已寫入")
+
+    except Exception as e:
+        st.error(f"寫入統計失敗：{e}")
 
     # ====== 本地儲存 ======
     result_df = pd.DataFrame(st.session_state.results)
