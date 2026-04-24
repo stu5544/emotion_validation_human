@@ -27,7 +27,12 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(
 )
 client = gspread.authorize(creds)
 
-sheet = client.open_by_key(SHEET_ID).sheet1
+try:
+    sheet = client.open_by_key(SHEET_ID).sheet1
+    stats_sheet = client.open_by_key(SHEET_ID).worksheet("user_stats")
+except Exception as e:
+    st.error(f"❌ 無法連接 Google Sheets：{e}")
+    st.stop()
 stats_sheet = client.open_by_key(SHEET_ID).worksheet("user_stats")
 
 # ====== 初始化 ======
