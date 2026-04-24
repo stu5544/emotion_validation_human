@@ -95,15 +95,21 @@ if st.session_state.index < len(st.session_state.sample):
     st.subheader("待驗證句子：")
     st.info(f"「 {row['sentence']} 」")
 
-    user_emotion = st.selectbox("您認為這句話屬於哪種情緒？", EMOTIONS, index=0)
+    user_emotion = st.selectbox(
+    "您認為這句話屬於哪種情緒？",
+    ["請選擇情緒"] + EMOTIONS
+)
 
-    if st.button("提交回答", use_container_width=True):
-        # 判定對錯
+if st.button("提交回答", use_container_width=True):
+
+    if user_emotion == "請選擇情緒":
+        st.warning("⚠️ 請先選擇情緒")
+    else:
         is_correct = (user_emotion == row["emotion"])
+
         if is_correct:
             st.session_state.correct += 1
 
-        # 存入結果清單
         st.session_state.results.append({
             "user": st.session_state.user_name,
             "sentence": row["sentence"],
@@ -112,28 +118,14 @@ if st.session_state.index < len(st.session_state.sample):
             "correct": is_correct
         })
 
-        # 回饋顯示（讓使用者看到結果再跳下一題）
-        if is_correct:
-            st.success("✔ 正確！")
-        else:
-            st.error(f"❌ 錯誤。模型預測為：{row['emotion']}")
-
-        # ====== Checkpoint 自動寫入 (每 10 題) ======
+        # checkpoint
         if len(st.session_state.results) % CHECKPOINT == 0:
             new_data = st.session_state.results[st.session_state.saved_index:]
             rows = [[r["user"], r["sentence"], r["model_emotion"], r["human_emotion"], r["correct"]] for r in new_data]
-            
+
             if safe_append(sheet, rows):
                 st.session_state.saved_index = len(st.session_state.results)
-                st.toast("✅ 進度已自動同步至雲端")
-            else:
-                st.warning("⚠️ 雲端同步失敗，系統將在測驗結束時重試")
 
-        # 本地備份 CSV
-        pd.DataFrame(st.session_state.results).to_csv("backup_results.csv", index=False)
-        
-        # 暫停一下再跳轉
-        time.sleep(1.2)
         st.session_state.index += 1
         st.rerun()
 
