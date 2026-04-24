@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import time
+import uuid
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -34,18 +35,27 @@ def get_sheets():
         sheet = client.open_by_key(SHEET_ID).sheet1
         stats_sheet = client.open_by_key(SHEET_ID).worksheet("user_stats")
         return sheet, stats_sheet
-    except Exception as e:
-        st.warning(f"⚠️ Google Sheets 連線失敗：{e}")
+    except:
         return None, None
 
-# ====== 安全寫入 ======
+# ====== 安全寫入（防重複 + 防429）======
 def safe_append(sheet, rows, retries=5):
-    if sheet is None:
+    if sheet is None or not rows:
         return False
+
+    # ⭐ 去重（防 rerun / retry）
+    unique_rows = []
+    seen = set()
+
+    for r in rows:
+        key = tuple(r)
+        if key not in seen:
+            seen.add(key)
+            unique_rows.append(r)
 
     for i in range(retries):
         try:
-            sheet.append_rows(rows)
+            sheet.append_rows(unique_rows)
             return True
         except Exception as e:
             if "429" in str(e):
@@ -57,11 +67,20 @@ def safe_append(sheet, rows, retries=5):
 # ====== 初始化 ======
 if "data" not in st.session_state:
     st.session_state.data = pd.read_csv(FILE_PATH)
-    st.session_state.sample = st.session_state.data.sample(n=20).reset_index(drop=True)
+    st.session_state.sample = (
+        st.session_state.data
+        .drop_duplicates(subset=["sentence"])
+        .sample(n=20)
+        .reset_index(drop=True)
+    )
     st.session_state.index = 0
-    st.session_state.correct = 0   # ⭐ 保留
+    st.session_state.correct = 0
     st.session_state.results = []
     st.session_state.saved_index = 0
+
+# ⭐ 每個人唯一 session
+if "session_id" not in st.session_state:
+    st.session_state.session_id = str(uuid.uuid4())
 
 if "user_name" not in st.session_state:
     st.session_state.user_name = ""
@@ -81,17 +100,18 @@ if not st.session_state.user_name:
 
 # ====== UI ======
 st.title("📊 情緒分類驗證系統")
-st.write(f"👤 使用者：{st.session_state.user_name}")
+total_q = len(st.session_state.sample)
 current = st.session_state.index
-total = len(st.session_state.sample)
 
-if current < total:
-    st.write(f"進度：{current + 1} / {total}")
+if current < total_q:
+    st.write(f"進度：{current+1} / {total_q}")
 else:
-    st.write(f"進度：{total} / {total}")
+    st.write(f"進度：{total_q} / {total_q}")
+
+st.write(f"👤 使用者：{st.session_state.user_name}")
 
 # ====== 題目 ======
-if st.session_state.index < len(st.session_state.sample):
+if st.session_state.index < total_q:
 
     row = st.session_state.sample.iloc[st.session_state.index]
 
@@ -106,8 +126,10 @@ if st.session_state.index < len(st.session_state.sample):
         if correct:
             st.session_state.correct += 1
 
-        # ⭐ 後端完整記錄
+        # ⭐ 每筆唯一
         st.session_state.results.append({
+            "id": str(uuid.uuid4()),
+            "session_id": st.session_state.session_id,
             "user": st.session_state.user_name,
             "sentence": row["sentence"],
             "model_emotion": row["emotion"],
@@ -118,7 +140,7 @@ if st.session_state.index < len(st.session_state.sample):
         # 本地備份
         pd.DataFrame(st.session_state.results).to_csv("backup.csv", index=False)
 
-        # ====== 批次寫入 ======
+        # ====== CHECKPOINT ======
         if len(st.session_state.results) % CHECKPOINT == 0:
 
             sheet, _ = get_sheets()
@@ -126,6 +148,8 @@ if st.session_state.index < len(st.session_state.sample):
             new_rows = []
             for r in st.session_state.results[st.session_state.saved_index:]:
                 new_rows.append([
+                    r["id"],
+                    r["session_id"],
                     r["user"],
                     r["sentence"],
                     r["model_emotion"],
@@ -138,7 +162,6 @@ if st.session_state.index < len(st.session_state.sample):
             if success:
                 st.session_state.saved_index = len(st.session_state.results)
 
-        # ❌ 不顯示正確錯誤（你要的）
         st.session_state.index += 1
         st.rerun()
 
@@ -152,31 +175,32 @@ else:
 
     sheet, stats_sheet = get_sheets()
 
-    # 補寫剩餘
+    # ====== 補寫 ======
     if st.session_state.saved_index < len(st.session_state.results):
-    
+
         remaining = st.session_state.results[st.session_state.saved_index:]
         rows = []
-    
+
         for r in remaining:
             rows.append([
+                r["id"],
+                r["session_id"],
                 r["user"],
                 r["sentence"],
                 r["model_emotion"],
                 r["human_emotion"],
                 r["correct"]
             ])
-    
-        # ⭐ 關鍵修改
+
         success = safe_append(sheet, rows)
-    
         if success:
             st.session_state.saved_index = len(st.session_state.results)
 
-    # ⭐ 寫入統計（你後端看的）
+    # ====== 統計 ======
     if stats_sheet:
         try:
             stats_sheet.append_row([
+                st.session_state.session_id,
                 st.session_state.user_name,
                 total,
                 correct,
