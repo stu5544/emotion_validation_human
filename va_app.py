@@ -20,7 +20,7 @@ scope = [
     "https://www.googleapis.com/auth/drive"
 ]
 
-# ====== ✅ Google Client（只初始化一次）======
+# ====== Google Client（只初始化一次）======
 @st.cache_resource
 def get_client():
     creds = ServiceAccountCredentials.from_json_keyfile_dict(
@@ -28,7 +28,7 @@ def get_client():
     )
     return gspread.authorize(creds)
 
-# ====== ✅ 延遲取得 Sheet（避免每次 rerun 打 API）======
+# ====== 延遲取得 Sheet ======
 def get_sheets():
     try:
         client = get_client()
@@ -39,7 +39,7 @@ def get_sheets():
         st.warning(f"⚠️ Google Sheets 連線失敗，改用本地備份：{e}")
         return None, None
 
-# ====== ✅ 安全寫入（防 429）======
+# ====== 安全寫入（防 429）======
 def safe_append(sheet, rows, retries=5):
     if sheet is None:
         return False
@@ -63,7 +63,6 @@ if "data" not in st.session_state:
     st.session_state.data = pd.read_csv(FILE_PATH)
     st.session_state.sample = st.session_state.data.sample(n=20).reset_index(drop=True)
     st.session_state.index = 0
-    st.session_state.correct = 0
     st.session_state.results = []
     st.session_state.saved_index = 0
 
@@ -100,19 +99,15 @@ if st.session_state.index < len(st.session_state.sample):
 
     if st.button("提交"):
 
-        correct = (user_emotion == row["emotion"])
-        if correct:
-            st.session_state.correct += 1
-
+        # 只記錄，不顯示正確與否
         st.session_state.results.append({
             "user": st.session_state.user_name,
             "sentence": row["sentence"],
             "model_emotion": row["emotion"],
-            "human_emotion": user_emotion,
-            "correct": correct
+            "human_emotion": user_emotion
         })
 
-        # ====== 本地備份（永遠安全）======
+        # ====== 本地備份 ======
         pd.DataFrame(st.session_state.results).to_csv("backup.csv", index=False)
 
         # ====== CHECKPOINT 才寫入 Google ======
@@ -126,8 +121,7 @@ if st.session_state.index < len(st.session_state.sample):
                     r["user"],
                     r["sentence"],
                     r["model_emotion"],
-                    r["human_emotion"],
-                    r["correct"]
+                    r["human_emotion"]
                 ])
 
             success = safe_append(sheet, new_rows)
@@ -138,20 +132,12 @@ if st.session_state.index < len(st.session_state.sample):
             else:
                 st.warning("⚠️ 未成功寫入 Google Sheets（已保存在本地 backup.csv）")
 
-        st.success("✔ 正確" if correct else "❌ 錯誤")
-
         st.session_state.index += 1
         st.rerun()
 
 # ====== 完成 ======
 else:
-    st.success("🎉 完成！")
-
-    total = len(st.session_state.results)
-    correct = st.session_state.correct
-    acc = correct / total
-
-    st.write(f"準確率：{acc:.2%}")
+    st.success("🎉 完成！感謝你的填答")
 
     # ====== 補寫剩餘 ======
     sheet, stats_sheet = get_sheets()
@@ -166,27 +152,20 @@ else:
                 r["user"],
                 r["sentence"],
                 r["model_emotion"],
-                r["human_emotion"],
-                r["correct"]
+                r["human_emotion"]
             ])
 
         safe_append(sheet, rows)
 
-    # ====== 寫統計 ======
+    # ====== 寫統計（只記錄作答數）======
     if stats_sheet:
         try:
             stats_sheet.append_row([
                 st.session_state.user_name,
-                total,
-                correct,
-                acc
+                len(st.session_state.results)
             ])
         except:
             pass
-
-    # ====== 下載 ======
-    df = pd.DataFrame(st.session_state.results)
-    st.download_button("下載CSV", df.to_csv(index=False), "result.csv")
 
     if st.button("重新開始"):
         st.session_state.clear()
