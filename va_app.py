@@ -154,10 +154,10 @@ else:
 
     # 補寫剩餘
     if st.session_state.saved_index < len(st.session_state.results):
-
+    
         remaining = st.session_state.results[st.session_state.saved_index:]
         rows = []
-
+    
         for r in remaining:
             rows.append([
                 r["user"],
@@ -166,8 +166,12 @@ else:
                 r["human_emotion"],
                 r["correct"]
             ])
-
-        safe_append(sheet, rows)
+    
+        # ⭐ 關鍵修改
+        success = safe_append(sheet, rows)
+    
+        if success:
+            st.session_state.saved_index = len(st.session_state.results)
 
     # ⭐ 寫入統計（你後端看的）
     if stats_sheet:
