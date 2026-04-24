@@ -70,7 +70,7 @@ if "data" not in st.session_state:
     st.session_state.sample = (
         st.session_state.data
         .drop_duplicates(subset=["sentence"])
-        .sample(n=20)
+        .sample(n=50)
         .reset_index(drop=True)
     )
     st.session_state.index = 0
