@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import os
 import time
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -8,7 +7,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 # ====== 設定 ======
 FILE_PATH = "output/high_quality_dataset.csv"
 SHEET_ID = "1BjiqJNwUE4ZeCxBtYRJ3qLUBym_2bAhHEZa93zWol1c"
-CHECKPOINT = 10   # 每10題存一次
+CHECKPOINT = 10
 
 EMOTIONS = [
     "joy", "sadness", "anger", "fear",
@@ -16,24 +15,48 @@ EMOTIONS = [
     "awe", "gratitude", "inner_peace", "compassion"
 ]
 
-# ====== Google Sheets ======
 scope = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive"
 ]
 
-creds = ServiceAccountCredentials.from_json_keyfile_dict(
-    st.secrets["gcp_service_account"], scope
-)
-client = gspread.authorize(creds)
+# ====== ✅ Google Client（只初始化一次）======
+@st.cache_resource
+def get_client():
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(
+        st.secrets["gcp_service_account"], scope
+    )
+    return gspread.authorize(creds)
 
-try:
-    sheet = client.open_by_key(SHEET_ID).sheet1
-    stats_sheet = client.open_by_key(SHEET_ID).worksheet("user_stats")
-except Exception as e:
-    st.error(f"❌ 無法連接 Google Sheets：{e}")
-    st.stop()
-stats_sheet = client.open_by_key(SHEET_ID).worksheet("user_stats")
+# ====== ✅ 延遲取得 Sheet（避免每次 rerun 打 API）======
+def get_sheets():
+    try:
+        client = get_client()
+        sheet = client.open_by_key(SHEET_ID).sheet1
+        stats_sheet = client.open_by_key(SHEET_ID).worksheet("user_stats")
+        return sheet, stats_sheet
+    except Exception as e:
+        st.warning(f"⚠️ Google Sheets 連線失敗，改用本地備份：{e}")
+        return None, None
+
+# ====== ✅ 安全寫入（防 429）======
+def safe_append(sheet, rows, retries=5):
+    if sheet is None:
+        return False
+
+    for i in range(retries):
+        try:
+            sheet.append_rows(rows)
+            return True
+        except Exception as e:
+            if "429" in str(e):
+                wait = 2 ** i
+                st.warning(f"⚠️ API 限流，等待 {wait}s 重試...")
+                time.sleep(wait)
+            else:
+                st.error(f"❌ 寫入錯誤：{e}")
+                return False
+    return False
 
 # ====== 初始化 ======
 if "data" not in st.session_state:
@@ -42,12 +65,12 @@ if "data" not in st.session_state:
     st.session_state.index = 0
     st.session_state.correct = 0
     st.session_state.results = []
-    st.session_state.saved_index = 0  # 已寫入到第幾筆
+    st.session_state.saved_index = 0
 
-# ====== 使用者名稱 ======
 if "user_name" not in st.session_state:
     st.session_state.user_name = ""
 
+# ====== 使用者登入 ======
 if not st.session_state.user_name:
     st.title("📊 情緒分類驗證系統")
     name = st.text_input("輸入名字")
@@ -81,7 +104,6 @@ if st.session_state.index < len(st.session_state.sample):
         if correct:
             st.session_state.correct += 1
 
-        # 存資料
         st.session_state.results.append({
             "user": st.session_state.user_name,
             "sentence": row["sentence"],
@@ -90,29 +112,31 @@ if st.session_state.index < len(st.session_state.sample):
             "correct": correct
         })
 
-        # ====== 每 CHECKPOINT 題自動存 ======
-        if len(st.session_state.results) % CHECKPOINT == 0:
-            try:
-                new_rows = []
-                for r in st.session_state.results[st.session_state.saved_index:]:
-                    new_rows.append([
-                        r["user"],
-                        r["sentence"],
-                        r["model_emotion"],
-                        r["human_emotion"],
-                        r["correct"]
-                    ])
-
-                sheet.append_rows(new_rows)
-                st.session_state.saved_index = len(st.session_state.results)
-
-                st.info(f"✅ 已自動儲存 {len(new_rows)} 筆")
-
-            except Exception as e:
-                st.error(f"自動儲存失敗：{e}")
-
-        # ====== 本地備份 ======
+        # ====== 本地備份（永遠安全）======
         pd.DataFrame(st.session_state.results).to_csv("backup.csv", index=False)
+
+        # ====== CHECKPOINT 才寫入 Google ======
+        if len(st.session_state.results) % CHECKPOINT == 0:
+
+            sheet, _ = get_sheets()
+
+            new_rows = []
+            for r in st.session_state.results[st.session_state.saved_index:]:
+                new_rows.append([
+                    r["user"],
+                    r["sentence"],
+                    r["model_emotion"],
+                    r["human_emotion"],
+                    r["correct"]
+                ])
+
+            success = safe_append(sheet, new_rows)
+
+            if success:
+                st.session_state.saved_index = len(st.session_state.results)
+                st.success(f"✅ 已同步 {len(new_rows)} 筆到 Google Sheets")
+            else:
+                st.warning("⚠️ 未成功寫入 Google Sheets（已保存在本地 backup.csv）")
 
         st.success("✔ 正確" if correct else "❌ 錯誤")
 
@@ -129,36 +153,36 @@ else:
 
     st.write(f"準確率：{acc:.2%}")
 
-    # ====== 補寫剩餘資料 ======
+    # ====== 補寫剩餘 ======
+    sheet, stats_sheet = get_sheets()
+
     if st.session_state.saved_index < len(st.session_state.results):
-        try:
-            remaining = st.session_state.results[st.session_state.saved_index:]
-            rows = []
-            for r in remaining:
-                rows.append([
-                    r["user"],
-                    r["sentence"],
-                    r["model_emotion"],
-                    r["human_emotion"],
-                    r["correct"]
-                ])
 
-            sheet.append_rows(rows)
-            st.success("✅ 補寫完成")
+        remaining = st.session_state.results[st.session_state.saved_index:]
+        rows = []
 
-        except Exception as e:
-            st.error(f"補寫失敗：{e}")
+        for r in remaining:
+            rows.append([
+                r["user"],
+                r["sentence"],
+                r["model_emotion"],
+                r["human_emotion"],
+                r["correct"]
+            ])
+
+        safe_append(sheet, rows)
 
     # ====== 寫統計 ======
-    try:
-        stats_sheet.append_row([
-            st.session_state.user_name,
-            total,
-            correct,
-            acc
-        ])
-    except:
-        pass
+    if stats_sheet:
+        try:
+            stats_sheet.append_row([
+                st.session_state.user_name,
+                total,
+                correct,
+                acc
+            ])
+        except:
+            pass
 
     # ====== 下載 ======
     df = pd.DataFrame(st.session_state.results)
