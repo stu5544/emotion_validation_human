@@ -82,7 +82,13 @@ if not st.session_state.user_name:
 # ====== UI ======
 st.title("📊 情緒分類驗證系統")
 st.write(f"👤 使用者：{st.session_state.user_name}")
-st.write(f"進度：{st.session_state.index+1} / 20")
+current = st.session_state.index
+total = len(st.session_state.sample)
+
+if current < total:
+    st.write(f"進度：{current + 1} / {total}")
+else:
+    st.write(f"進度：{total} / {total}")
 
 # ====== 題目 ======
 if st.session_state.index < len(st.session_state.sample):
